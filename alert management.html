@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOUALA Disaster Management - Alert Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="alert-icon">⚠</span>
+                    <div class="app-title-wrapper">
+                        <span class="app-title-bold">DOUALA</span>
+                        <span class="app-subtitle">Disaster Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="alert management.html" class="nav-item active">
+                    <span class="nav-icon">⚠</span>
+                    <span>Alert Management</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📄</span>
+                    <span>Reports Validation</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🗺️</span>
+                    <span>Risk Zones</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Users & Roles</span>
+                </a>
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Admin User</div>
+                        <div class="user-email">admin@douala.cm</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h1 class="welcome-title">Welcome Back</h1>
+                    <p class="welcome-subtitle">Monitor and manage disaster alerts for Douala.</p>
+                </div>
+                <div class="header-right">
+                    <button class="emergency-btn">
+                        <span class="emergency-dot"></span>
+                        <span class="emergency-label">Emergency Mode Active</span>
+                    </button>
+                    <div class="notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <button class="logout-btn">
+                        Logout
+                        <span class="logout-icon">→</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Alert Management Content -->
+            <div class="alerts-content">
+                <div class="content-header alerts-header">
+                    <div class="content-title-section">
+                        <h2 class="content-title">Alert Management</h2>
+                        <p class="content-subtitle">Create, edit, and manage disaster alerts.</p>
+                    </div>
+                    <div class="content-actions">
+                        <button class="create-alert-btn">
+                            <span class="create-alert-icon">+</span>
+                            Create New Alert
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Statistics cards -->
+                <div class="alert-stats-grid">
+                    <div class="alert-stat-card">
+                        <div class="alert-stat-header">
+                            <div>
+                                <div class="alert-stat-label">Active Alerts</div>
+                                <div class="alert-stat-value" data-stat="active">8</div>
+                            </div>
+                            <div class="alert-stat-icon-wrap active">
+                                <span class="alert-stat-icon">⚠</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-stat-card">
+                        <div class="alert-stat-header">
+                            <div>
+                                <div class="alert-stat-label">Draft Alerts</div>
+                                <div class="alert-stat-value" data-stat="draft">2</div>
+                            </div>
+                            <div class="alert-stat-icon-wrap draft">
+                                <span class="alert-stat-icon">✎</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-stat-card">
+                        <div class="alert-stat-header">
+                            <div>
+                                <div class="alert-stat-label">Expired (Last 24h)</div>
+                                <div class="alert-stat-value" data-stat="expired">5</div>
+                            </div>
+                            <div class="alert-stat-icon-wrap expired">
+                                <span class="alert-stat-icon">✔</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Alerts Table -->
+                <section class="alerts-table-section">
+                    <div class="alerts-table-header">
+                        <h3 class="alerts-table-title">All Alerts</h3>
+                        <div class="alerts-filters">
+                            <button class="filter-chip filter-chip-active" data-filter="all">All</button>
+                            <button class="filter-chip" data-filter="active">Active</button>
+                            <button class="filter-chip" data-filter="draft">Draft</button>
+                            <button class="filter-chip" data-filter="expired">Expired</button>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="alerts-table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Severity</th>
+                                    <th>Affected Zones</th>
+                                    <th>Status</th>
+                                    <th>Valid Until</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-status="active">
+                                    <td>Flood Warning</td>
+                                    <td>
+                                        <span class="severity-pill high">High</span>
+                                    </td>
+                                    <td>
+                                        <span class="zone-pill">Bonabéri</span>
+                                        <span class="zone-pill">Deido</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-pill active">active</span>
+                                    </td>
+                                    <td>2026-01-02 18:00</td>
+                                    <td>
+                                        <button class="icon-btn edit-alert" title="Edit">✏</button>
+                                        <button class="icon-btn delete-alert" title="Delete">🗑</button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="active">
+                                    <td>Landslide Risk</td>
+                                    <td>
+                                        <span class="severity-pill medium">Medium</span>
+                                    </td>
+                                    <td>
+                                        <span class="zone-pill">Bonamoussadi</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-pill active">active</span>
+                                    </td>
+                                    <td>2026-01-01 23:59</td>
+                                    <td>
+                                        <button class="icon-btn edit-alert" title="Edit">✏</button>
+                                        <button class="icon-btn delete-alert" title="Delete">🗑</button>
+                                    </td>
+                                </tr>
+
+                                <tr data-status="active">
+                                    <td>Heavy Rainfall</td>
+                                    <td>
+                                        <span class="severity-pill high">High</span>
+                                    </td>
+                                    <td>
+                                        <span class="zone-pill">All Districts</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-pill active">active</span>
+                                    </td>
+                                    <td>2026-01-02 12:00</td>
+                                    <td>
+                                        <button class="icon-btn edit-alert" title="Edit">✏</button>
+                                        <button class="icon-btn delete-alert" title="Delete">🗑</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
