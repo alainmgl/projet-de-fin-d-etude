@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOUALA Disaster Management - Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="alert-icon">⚠</span>
+                    <div class="app-title-wrapper">
+                        <span class="app-title-bold">DOUALA</span>
+                        <span class="app-subtitle">Disaster Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚠</span>
+                    <span>Alert Management</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📄</span>
+                    <span>Reports Validation</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🗺️</span>
+                    <span>Risk Zones</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Users & Roles</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Admin User</div>
+                        <div class="user-email">admin@douala.cm</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h1 class="welcome-title">Welcome Back</h1>
+                    <p class="welcome-subtitle">Monitor and manage disaster alerts for Douala.</p>
+                </div>
+                <div class="header-right">
+                    <button class="emergency-btn">
+                        <span class="emergency-dot"></span>
+                        <span class="emergency-label">Emergency Mode Active</span>
+                    </button>
+                    <div class="notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <button class="logout-btn">
+                        Logout
+                        <span class="logout-icon">→</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Analytics Content -->
+            <div class="analytics-content">
+                <div class="content-header">
+                    <div class="content-title-section">
+                        <h2 class="content-title">Statistics & Analytics</h2>
+                        <p class="content-subtitle">Data-driven insights for decision making.</p>
+                    </div>
+                    <div class="content-actions">
+                        <button class="export-btn">
+                            <span class="export-icon">📥</span>
+                            Export PDF
+                        </button>
+                        <button class="export-btn">
+                            <span class="export-icon">📥</span>
+                            Export CSV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Metrics Cards -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Total Alerts (6mo)</div>
+                        <div class="metric-value">140</div>
+                        <div class="metric-trend positive">
+                            <span class="trend-arrow">↑</span>
+                            <span>18% improvement</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-label">Avg Response Time</div>
+                        <div class="metric-value">28m</div>
+                        <div class="metric-trend positive">
+                            <span class="trend-arrow">↑</span>
+                            <span>38% faster</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-label">Lives Protected</div>
+                        <div class="metric-value">12.5K</div>
+                        <div class="metric-subtitle">Estimated reach</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-label">Validation Rate</div>
+                        <div class="metric-value">87%</div>
+                        <div class="metric-subtitle">Report accuracy.</div>
+                    </div>
+                </div>
+
+                <!-- Charts Grid -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3 class="chart-title">Alerts by Month</h3>
+                        <canvas id="alertsChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h3 class="chart-title">Incident Types Distribution</h3>
+                        <canvas id="incidentChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h3 class="chart-title">Most Affected Neighborhoods</h3>
+                        <canvas id="neighborhoodsChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <h3 class="chart-title">Average Response Time Trend</h3>
+                        <canvas id="responseTimeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
